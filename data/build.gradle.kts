@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.hilt.android)
+    implementation(libs.logging.interceptor)
     ksp(libs.dagger.hilt.android.compiler)
     implementation(project(":domain"))
     testImplementation(libs.junit)
