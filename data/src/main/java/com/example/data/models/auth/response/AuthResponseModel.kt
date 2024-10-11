@@ -4,7 +4,7 @@ import com.example.domain.entity.auth.response.ErrorEntity
 import com.google.gson.annotations.SerializedName
 
 data class AuthResponseModel(
-    @field:SerializedName("msg")
+    @field:SerializedName("message")
     val message: String? = null,
 
     @field:SerializedName("statusMsg")
