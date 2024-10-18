@@ -1,8 +1,10 @@
 package com.example.data.mappers
 
+import com.example.data.models.auth.request.LoginRequestModel
 import com.example.data.models.auth.response.AuthResponseModel
 import com.example.data.models.auth.response.ErrorModel
 import com.example.data.models.auth.response.UserModel
+import com.example.domain.entity.auth.request.LoginRequestEntity
 import com.example.domain.entity.auth.response.AuthResponseEntity
 import com.example.domain.entity.auth.response.ErrorEntity
 import com.example.domain.entity.auth.response.UserEntity
@@ -31,5 +33,12 @@ fun ErrorModel.toEntity() : ErrorEntity{
         message = message,
         parameter = parameter,
         location = location
+    )
+}
+
+fun LoginRequestModel.toEntity() : LoginRequestEntity{
+    return LoginRequestEntity(
+        email = email,
+        password = password
     )
 }
