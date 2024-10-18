@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.hilt.android)
     implementation(libs.logging.interceptor)
+    implementation(libs.androidx.datastore.preferences)
     ksp(libs.dagger.hilt.android.compiler)
     implementation(project(":domain"))
     testImplementation(libs.junit)
