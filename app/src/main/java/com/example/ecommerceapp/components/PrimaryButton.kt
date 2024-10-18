@@ -1,6 +1,9 @@
 package com.example.ecommerceapp.components
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -26,6 +29,7 @@ fun PrimaryButton(
             containerColor = Color.White,
             contentColor = DarkBlue
         ),
+        contentPadding = PaddingValues(vertical = 16.dp),
         modifier = modifier.fillMaxWidth()
     ){
         Text(text = text , style = MaterialTheme.typography.labelLarge)

@@ -25,6 +25,13 @@ val Typography = Typography(
         lineHeight = 18.sp,
         color = DarkBlue
     ),
+    displaySmall = TextStyle(
+//        fontFamily = Poppins,
+        fontWeight = FontWeight(400),
+        fontSize = 18.sp,
+        lineHeight = 18.sp,
+        color = Color.White
+    ),
     labelMedium = TextStyle(
 //        fontFamily = Poppins,
         fontWeight = FontWeight(300),

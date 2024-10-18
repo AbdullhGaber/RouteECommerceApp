@@ -13,6 +13,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.ecommerceapp.screens.sign_in.SignInScreen
+import com.example.ecommerceapp.screens.sign_in.SignInScreenState
+import com.example.ecommerceapp.screens.sign_in.SignInViewModel
 import com.example.ecommerceapp.screens.sign_up.SignUpScreen
 import com.example.ecommerceapp.screens.sign_up.SignUpScreenState
 import com.example.ecommerceapp.screens.sign_up.SignUpViewModel
@@ -27,23 +30,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EcommerceAppTheme {
-                val signUpViewModel : SignUpViewModel = hiltViewModel()
 
-                val signUpScreenState = SignUpScreenState(
-                    errorLocation = signUpViewModel.errorLocation,
-                    authResponseEntity=signUpViewModel.authResponseStateFlow.collectAsState(),
-                    fullNameTextField=signUpViewModel.fullNameTextField,
-                    mobileNumberTextField=signUpViewModel.mobileNumberTextField,
-                    emailAddressTextField=signUpViewModel.emailAddressTextField,
-                    passwordTextField= signUpViewModel.passwordTextField,
-                    rePasswordTextField=signUpViewModel.rePasswordTextField,
-                    passwordVisible=signUpViewModel.passwordVisible,
-                )
-
-                SignUpScreen(
-                    signUpScreenState = signUpScreenState,
-                    signUpScreenEvents = signUpViewModel::onEvent
-                )
             }
         }
     }

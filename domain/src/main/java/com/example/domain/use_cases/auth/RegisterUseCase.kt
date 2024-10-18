@@ -2,7 +2,7 @@ package com.example.domain.use_cases.auth
 
 import com.example.domain.entity.auth.request.RegisterRequestEntity
 import com.example.domain.entity.auth.response.AuthResponseEntity
-import com.example.domain.repository.AuthRepository
+import com.example.domain.repository.auth.AuthRepository
 
 class RegisterUseCase(
     private val authRepository: AuthRepository
