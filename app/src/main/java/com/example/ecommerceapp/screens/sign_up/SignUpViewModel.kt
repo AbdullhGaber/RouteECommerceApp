@@ -78,6 +78,9 @@ class SignUpViewModel @Inject constructor(
                 _authResponseStateFlow.emit(
                     Resource.Success(data = registerResponse)
                 )
+                val token = registerResponse.token
+                authUseCases.setTokenUseCase(token!!)
+                Log.e("DataStore","token set successfully in datastore ==> token = ${authUseCases.getTokenUseCase()}")
             }
         }
     }
