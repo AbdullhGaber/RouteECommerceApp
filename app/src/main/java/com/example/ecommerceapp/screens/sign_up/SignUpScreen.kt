@@ -3,6 +3,7 @@ package com.example.ecommerceapp.screens.sign_up
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -38,7 +39,8 @@ import com.example.ecommerceapp.ui.theme.EcommerceAppTheme
 fun SignUpScreen(
     modifier: Modifier = Modifier,
     signUpScreenState: SignUpScreenState = SignUpScreenState(),
-    signUpScreenEvents: (SignUpScreenEvents) -> Unit = {}
+    signUpScreenEvents: (SignUpScreenEvents) -> Unit = {},
+    navigateToSignIn : () -> Unit = {}
 ){
     val scrollState = rememberScrollState()
 
@@ -204,6 +206,18 @@ fun SignUpScreen(
                 onClick = {
                     signUpScreenEvents(SignUpScreenEvents.SignUp)
                 }
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(
+                text = "Already have an account? Login",
+                style = MaterialTheme.typography.labelSmall,
+                modifier = Modifier.padding(end = 16.dp)
+                    .align(Alignment.CenterHorizontally)
+                    .clickable {
+                        navigateToSignIn()
+                    }
             )
 
             Spacer(modifier = Modifier.height(16.dp))

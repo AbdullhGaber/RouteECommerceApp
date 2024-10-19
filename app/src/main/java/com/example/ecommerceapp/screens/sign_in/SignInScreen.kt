@@ -3,6 +3,7 @@ package com.example.ecommerceapp.screens.sign_in
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -32,7 +33,8 @@ import com.example.ecommerceapp.ui.theme.EcommerceAppTheme
 fun SignInScreen(
     modifier : Modifier = Modifier,
     signInScreenState: SignInScreenState = SignInScreenState(),
-    signInScreenEvents: (SignInScreenEvents) -> Unit = {}
+    signInScreenEvents: (SignInScreenEvents) -> Unit = {},
+    navigateToSignUp: () -> Unit = {}
 ){
     if(signInScreenState.authResponseEntity.value is Resource.Failure){
         signInScreenState.errorMessage.value = signInScreenState.authResponseEntity.value.message.toString()
@@ -151,7 +153,11 @@ fun SignInScreen(
             Text(
                 text = "Don’t have an account? Create Account",
                 style = MaterialTheme.typography.labelSmall,
-                modifier = Modifier.padding(end = 16.dp).align(Alignment.CenterHorizontally)
+                modifier = Modifier.padding(end = 16.dp)
+                    .align(Alignment.CenterHorizontally)
+                    .clickable {
+                        navigateToSignUp()
+                    }
             )
         }
     }
