@@ -69,6 +69,8 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
     testImplementation(libs.junit)
+    implementation(libs.accompanist.pager)
+    implementation(libs.google.accompanist.pager.indicators)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

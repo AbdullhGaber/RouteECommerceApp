@@ -19,6 +19,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 retrofit = "2.9.0"
 loggingInterceptor = "4.12.0"
+googleAccompanistPagerIndicators = "0.28.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +46,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
+accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "googleAccompanistPagerIndicators" }
+google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "googleAccompanistPagerIndicators" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
