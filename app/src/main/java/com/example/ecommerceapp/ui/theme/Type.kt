@@ -45,6 +45,12 @@ val Typography = Typography(
         fontSize = 18.sp,
         lineHeight = 18.sp,
         color = Color.White
+    ),
+    bodySmall = TextStyle(
+        fontWeight = FontWeight(300),
+        fontSize = 14.sp,
+        lineHeight = 18.sp,
+        color = Color.Black.copy(alpha = 0.7f)
     )
 
 )
